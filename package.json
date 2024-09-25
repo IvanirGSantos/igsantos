@@ -1,0 +1,51 @@
+{
+  "name": "meow-action",
+  "description": "Zero To Hero with Meow",
+  "version": "0.0.0",
+  "author": "Niek Palm",
+  "private": true,
+  "licenses": "Philips InnnerSource",
+  "keywords": [
+    "actions",
+    "github",
+    "workshop"
+  ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "format": "prettier --write **/*.ts",
+    "format:check": "prettier --check **/*.ts",
+    "lint": "eslint src/**/*.ts -c ./.github/linters/.eslintrc.yml",
+    "test": "jest --coverage",
+    "build": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "@octokit/rest": "^20.0.2"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.2",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "@vercel/ncc": "^0.38.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-github": "^4.10.2",
+    "eslint-plugin-jest": "^27.9.0",
+    "eslint-plugin-jsonc": "^2.14.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "jest": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
+    "prettier": "^3.2.5",
+    "prettier-eslint": "^16.3.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.3"
+  }
+}

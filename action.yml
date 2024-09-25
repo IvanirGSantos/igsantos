@@ -1,0 +1,15 @@
+name: 'Meow'
+description: 'Add a cat to your issue or pull request comments.'
+author: 'Niek Palm'
+branding:
+  icon: 'alert-triangle'
+  color: 'green'
+
+inputs:
+  github_token:
+    description: 'GitHub token to update issue or pull requests comments'
+    required: true
+
+runs:
+  using: node20
+  main: dist/index.js

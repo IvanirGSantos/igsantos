@@ -1,0 +1,27 @@
+{
+  "name": "Zero to Hero on Code Hub",
+  "build": { "dockerfile": "Dockerfile" },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  "containerEnv": {
+    "WORKSPACE": "${containerWorkspaceFolder}" // e.g. /workspaces/my-project
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
+        "mkhl.shfmt",
+        "orta.vscode-jest",
+        "signageos.signageos-vscode-sops",
+        "SonarSource.sonarlint-vscode",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  },
+  "postCreateCommand": "sudo cp .devcontainer/welcome.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt"
+}

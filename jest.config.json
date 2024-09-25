@@ -1,0 +1,41 @@
+{
+  "transform": {
+    "\\.[jt]sx?$": [
+      "ts-jest",
+      {
+        "useESM": true
+      }
+    ]
+  },
+  "moduleNameMapper": {
+    "^(\\.\\.?\\/.+)\\.jsx?$": "$1"
+  },
+  "extensionsToTreatAsEsm": [
+    ".ts"
+  ],
+  "coverageReporters": [
+    "lcov",
+    "text",
+    "html"
+  ],
+  "collectCoverageFrom": [
+    "src/**/*.{ts,js,jsx}",
+    "!src/index.ts"
+  ],
+  "testEnvironment": "node",
+  "collectCoverage": true,
+  "clearMocks": true,
+  "moduleFileExtensions": [
+    "js",
+    "ts"
+  ],
+  "verbose": true,
+  "coverageThreshold": {
+    "global": {
+      "statements": 100,
+      "branches": 100,
+      "functions": 100,
+      "lines": 100
+    }
+  }
+}

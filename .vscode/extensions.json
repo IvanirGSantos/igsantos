@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "ms-vscode-remote.remote-containers",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "mkhl.shfmt",
+    "orta.vscode-jest",
+    "signageos.signageos-vscode-sops",
+    "SonarSource.sonarlint-vscode",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
