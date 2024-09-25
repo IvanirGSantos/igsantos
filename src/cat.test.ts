@@ -25,5 +25,6 @@ describe('Cat', () => {
 
     const catImageUrl = await getRandomCatImage();
     expect(catImageUrl).toBe('https://http.cat/images/500.jpg');
+    //x 
   });
 });
